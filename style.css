@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+    --active-input-border: linear-gradient(180deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --input-errors: hsl(0, 100%, 66%);
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-col{
+    height: 100vh;
+    width: 35vw;
+    background: url(images/bg-main-desktop.png) no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.card{
+    max-width: 380px;
+    width: 100%;
+}
+
+.card-front,
+.card-logo,
+.card-number,
+.card-back{
+    position: absolute;
+}
+
+.card-front{
+    top: 100px;
+    right: -100px;
+    z-index: 10;
+}
+
+.card-logo{
+    left: 30px;
+    top: 25px;
+    width: 65px;
+    z-index: 999;
+}
+.card-number{
+    top: 50%;
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    color: var(--White);
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.card-back{
+    bottom: 100px;
+    right: -150px;
+}
