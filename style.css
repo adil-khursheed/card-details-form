@@ -5,7 +5,7 @@
     --Light-grayish-violet: hsl(270, 3%, 87%);
     --Dark-grayish-violet: hsl(279, 6%, 55%);
     --Very-dark-violet: hsl(278, 68%, 11%);
-    --active-input-border: linear-gradient(180deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --active-input-border: linear-gradient(90deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
     --input-errors: hsl(0, 100%, 66%);
 }
 
@@ -15,7 +15,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Space Grotesk', sans-serif;
 }
 
 body{
@@ -24,8 +23,10 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
+/* ========== Left Column Layout Start ========== */
 .left-col{
     height: 100vh;
     width: 35vw;
@@ -41,14 +42,18 @@ body{
 
 .card-front,
 .card-logo,
-.card-number,
-.card-back{
+.default-number,
+.card-back,
+.default-name,
+.default-expiry,
+.default-pin{
     position: absolute;
 }
 
 .card-front{
-    top: 100px;
+    top: 30%;
     right: -100px;
+    transform: translateY(-50%);
     z-index: 10;
 }
 
@@ -58,17 +63,166 @@ body{
     width: 65px;
     z-index: 999;
 }
-.card-number{
+.default-number{
     top: 50%;
     font-size: 1.5rem;
     width: 100%;
     text-align: center;
     color: var(--White);
     letter-spacing: 2px;
-    font-weight: 500;
 }
 
 .card-back{
-    bottom: 100px;
-    right: -150px;
+    bottom: 30%;
+    right: -180px;
+    transform: translateY(50%);
+}
+
+.default-name,
+.default-expiry{
+    bottom: 30px;
+    color: var(--White);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+.default-name{
+    left: 37px;
+    text-transform: uppercase;
+}
+
+.default-expiry{
+    right: 35px;
+}
+
+.default-pin{
+    top: 48.5%;
+    right: 45px;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: var(--White);
+    letter-spacing: 2px;
+}
+/* ========== Left Column Layout Start ========== */
+
+/* ========== Right Column Layout Start ========== */
+.right-col{
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10rem;
+    flex-direction: column;
+}
+
+form,
+.completed-state{
+    max-width: 320px;
+    width: 100%;
+}
+
+form div{
+    margin-bottom: 1rem;
+}
+
+label,
+.name-input input,
+.number-input input,
+input[type=submit]{
+    display: block;
+    width: 100%;
+}
+
+label{
+    font-size: 0.6rem;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input{
+    position: relative;
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid var(--Light-grayish-violet);
+    outline: none;
+}
+
+input::placeholder{
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--Dark-grayish-violet);
+}
+
+input:focus{
+    color: var(--Very-dark-violet);
+    padding: 0.6rem 0.8rem;
+    border: double 1px transparent;
+    border-radius: 6px;
+    background-image: var(--validationColor, linear-gradient(white, white), linear-gradient(90deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%)));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+.date_pin{
+    display: flex;
+}
+
+.date-input input{
+    display: inline-block;
+    width: 45%;
+}
+
+.error-msg{
+    color: var(--input-errors);
+    font-size: 0.6rem;
+}
+
+input[type=submit],
+.completed-state button{
+    border: none !important;
+    background-color: var(--Very-dark-violet);
+    color: var(--White);
+    padding: 0.8rem !important;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+input[type=submit]:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 3.5px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.completed-state{
+    text-align: center;
+}
+
+.completed-state img{
+    width: 60px;
+    margin-bottom: 1.5rem;
+}
+
+.completed-state h2{
+    color: var(--Very-dark-violet);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.completed-state p{
+    color: var(--Dark-grayish-violet);
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+.completed-state button{
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* ========== Right Column Layout End ========== */
+
+.hide{
+    display: none;
 }
