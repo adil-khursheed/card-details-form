@@ -15,7 +15,7 @@
       <img src="images/card-logo.svg" alt="" class="card-logo">
       <p class="default-number" id="default-number">0000 0000 0000 0000</p>
       <p class="default-name" id="default-name">Jane Appleseed</p>
-      <p class="default-expiry"><span id="default-month">00</span>/<span id="deafult-year">00</span></p>
+      <p class="default-expiry"><span id="default-month">00</span>/<span id="default-year">00</span></p>
     </div>
     <div class="card-back">
       <img src="images/bg-card-back.png" alt="" class="card">
@@ -28,26 +28,27 @@
   <div class="right-col">
 
     <!-- ========== Form Layout Start ========== -->
-    <form action="#" method="post" id="card-form">
+    <form action="#" method="post" class="card-form">
       <div class="name-input">
         <label for="card_holder_name">cardholder name</label>
-        <input type="text" name="name" id="card_holder_name" placeholder="e.g. Jane Appleseed" autocomplete="off" required oninput="inputName()">
+        <input type="text" name="name" id="card_holder_name" placeholder="e.g. Jane Appleseed" autocomplete="off">
+        <span id="name-error" class="error-msg"></span>
       </div>
       <div class="number-input">
         <label for="card-number">card number</label>
-        <input type="text" name="number" id="card-number" placeholder="e.g. 1234 5678 9123 0000" autocomplete="off" required oninput="inputNumber()">
+        <input type="text" name="number" id="card-number" placeholder="e.g. 1234 5678 9123 0000" autocomplete="off">
         <span id="number-error" class="error-msg"></span>
       </div>
       <div class="date_pin">
         <div class="date-input">
           <label for="exp_date">Exp. Date (MM/YY)</label>
-          <input type="text" name="date" id="exp_month" placeholder="MM" autocomplete="off" required>
-          <input type="text" name="date" id="exp_year" placeholder="YY" autocomplete="off" required>
+          <input type="text" name="date" id="exp_month" placeholder="MM" autocomplete="off">
+          <input type="text" name="date" id="exp_year" placeholder="YY" autocomplete="off">
           <span id="date-error" class="error-msg"></span>
         </div>
         <div class="pin-input">
           <label for="security-pin">CVC</label>
-          <input type="text" name="security-pin" id="security-pin" placeholder="e.g. 123" autocomplete="off" required>
+          <input type="text" name="security-pin" id="security-pin" placeholder="e.g. 123" autocomplete="off">
           <span id="pin-error" class="error-msg"></span>
         </div>
       </div>
@@ -56,7 +57,7 @@
     <!-- ========== Form Layout End ========== -->
 
     <!-- ========== Completed State Start ========== -->
-    <div class="completed-state hide">
+    <div class="completed-state">
       <img src="images/icon-complete.svg" alt="">
       <h2>Thank you!</h2>
       <p>We've added your card details</p>

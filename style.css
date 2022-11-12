@@ -65,9 +65,11 @@ body{
 }
 .default-number{
     top: 50%;
+    left: 60%;
+    transform: translateX(-50%);
     font-size: 1.5rem;
     width: 100%;
-    text-align: center;
+    text-align: start;
     color: var(--White);
     letter-spacing: 2px;
 }
@@ -144,7 +146,8 @@ input{
     position: relative;
     padding: 0.6rem 0.8rem;
     border-radius: 6px;
-    border: 1px solid var(--Light-grayish-violet);
+    border: 1px solid;
+    border-color: var(--validColor, hsl(270, 3%, 87%));
     outline: none;
 }
 
@@ -184,15 +187,10 @@ input[type=submit],
     color: var(--White);
     padding: 0.8rem !important;
     cursor: pointer;
-    transition: 0.3s ease-in;
-}
-
-input[type=submit]:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 3.5px 3px 0 rgba(0, 0, 0, 0.3);
 }
 
 .completed-state{
+    display: none;
     text-align: center;
 }
 
@@ -222,7 +220,3 @@ input[type=submit]:hover{
 }
 
 /* ========== Right Column Layout End ========== */
-
-.hide{
-    display: none;
-}
