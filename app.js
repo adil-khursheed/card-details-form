@@ -167,8 +167,7 @@ submitBtn.addEventListener('click', (event) => {
 
 // Form Reset
 resetBtn.addEventListener('click', () => {
-    cardForm.style.display = 'block';
-    completeState.style.display = 'none';
+    window.location.reload();
 })
 
 

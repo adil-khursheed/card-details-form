@@ -36,8 +36,7 @@ body{
 }
 
 .card{
-    max-width: 380px;
-    width: 100%;
+    width: 380px;
 }
 
 .card-front,
@@ -220,3 +219,95 @@ input[type=submit],
 }
 
 /* ========== Right Column Layout End ========== */
+
+
+/* ========== Media Queries ========== */
+@media screen and (max-width: 850px) {
+    .card{
+        width: 320px;
+    }
+
+    .card-front{
+        top: 40%;
+        right: -80px;
+    }
+
+    .default-number{
+        left: 61%;
+        font-size: 1.2rem;
+    }
+
+    .card-back{
+        bottom: 40%;
+        right: -150px;
+        transform: translateY(50%);
+    }
+}
+
+
+@media screen and (max-width: 780px) {
+    body{
+        flex-direction: column;
+    }
+
+    .left-col{
+        width: 100vw;
+        height: 40vh;
+        background: url(images/bg-main-mobile.png) no-repeat;
+        background-size: cover;
+    }
+
+    .card{
+        width: 350px;
+    }
+
+    .card-front{
+        top: 60%;
+        right: 60%;
+        transform: translateX(50%);
+    }
+
+    .card-back{
+        top: 25%;
+        right: 40%;
+        transform: translateX(50%);
+    }
+
+    .default-pin{
+        top: 73%;
+    }
+
+    .right-col{
+        height: 60vh;
+        width: 100%;
+        padding-left: 0rem;
+    }
+}
+
+
+@media screen and (max-width: 460px) {
+
+    .left-col{
+        height: 30vh;
+    }
+    .card{
+        width: 300px;
+    }
+
+    .card-logo{
+        width: 40px;
+    }
+
+    .default-number{
+        left: 61%;
+        font-size: 1rem;
+    }
+
+    .default-pin{
+        top: 82%;
+    }
+
+    .right-col{
+        height: 70vh;
+    }
+}
