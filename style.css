@@ -274,13 +274,14 @@ input[type=submit],
     }
 
     .default-pin{
-        top: 73%;
+        top: 88%;
     }
 
     .right-col{
         height: 60vh;
         width: 100%;
         padding-left: 0rem;
+        padding: 12rem 0;
     }
 }
 
@@ -291,7 +292,7 @@ input[type=submit],
         height: 30vh;
     }
     .card{
-        width: 300px;
+        width: 280px;
     }
 
     .card-logo{
@@ -304,7 +305,7 @@ input[type=submit],
     }
 
     .default-pin{
-        top: 82%;
+        top: 93%;
     }
 
     .right-col{
